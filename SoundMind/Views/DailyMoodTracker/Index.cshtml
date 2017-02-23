@@ -1,0 +1,25 @@
+﻿@model IEnumerable<SoundMind.Models.DailyMoodTracker>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1 align="center" style="color:black">Daily Mood Tracker</h1>
+
+<table class="table-condensed" align="center" style="color:black">
+    
+@foreach (var item in Model)
+{
+    <tr>
+        <th>
+            The date: @Html.DisplayFor(modelItem => item.Date)
+            <br />
+           Your mood was: @Html.DisplayFor(modelItem => item.Mood)
+            <br />
+           Your notes were: @Html.DisplayFor(modelItem => item.Notes)
+            <br />
+        </th>
+    </tr>
+}
+    
+</table>

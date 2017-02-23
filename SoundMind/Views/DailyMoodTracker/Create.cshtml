@@ -1,0 +1,63 @@
+﻿@model SoundMind.Models.DailyMoodTracker
+
+@{
+    ViewBag.Title = "Enter today's mood here.";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<body>
+
+    <form action="" align="right">
+        <h3 style="color:black">Did you exercise today?</h3>
+
+        <h4 style="color:black">Exercise can range from going on a walk to going for a bike ride.</h4>
+        <input type="checkbox" name="exercise" value="Bike" style="color:black"> Yes, I exercised today.<br />
+        <input type="checkbox" name="noexercise" value="Car" style="color:black"> No, I haven't exercised yet today.
+    </form>
+
+</body>
+</html>
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h2 style="color:black">Today's Daily Mood Tracker</h2>
+        <h4 style="color:black">Fill out the following form to enter new information about how you are feeling.</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Date, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Date, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Date, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Mood, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Mood, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Mood, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Notes, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Notes, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Notes, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Click to add today's mood." class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div align="right">
+    @Html.ActionLink("Click here to see a journal of the moods that you have entered", "Index")
+</div>

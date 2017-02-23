@@ -1,0 +1,23 @@
+input {
+  width:30%;
+}
+.heading img {
+  font-family:'Lobster';
+  width: 80%;
+}
+h2 {
+  color:black;
+}
+p {
+  color: black;
+  font-size:25px;
+}
+div {
+  width: 80%;
+}
+body {
+  background-image: url("FlowerMusic.jpeg");
+}
+#output {
+  font-family:'Lobster';
+}

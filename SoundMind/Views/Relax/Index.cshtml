@@ -1,0 +1,72 @@
+﻿@model IEnumerable<SoundMind.Models.Relax>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .dropbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+                .dropdown-content a:hover {
+                    background-color: #f1f1f1;
+                }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Relaxation Activities</h2>
+    <p>Move the mouse over the button to select your relaxation activity.</p>
+
+    <div class="dropdown">
+        <button class="btn btn-default">Relaxation Techniques</button>
+        <div class="dropdown-content">
+            <a href="~/Content/images/Photo1.jpg">Breathing Exercise</a>
+            <a href="~/Content/images/Photo2.jpg">Muscle Relaxation Exercise</a>
+            <a href="~/Content/images/Photo3.jpg">Breathing Technique</a>
+            <a href="~/Content/images/Photo4.jpg">Guided imagery</a>
+            <a href="~/Content/images/Photo5.jpg">Hand Relaxation Technique</a>
+            <a href="~/Content/images/Photo6.jpg">Head Relaxation Technique</a>
+        </div>
+    </div>
+
+</body>
+</html>
