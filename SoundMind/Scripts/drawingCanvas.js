@@ -84,9 +84,11 @@ function setSwatch(e) {
 }
 setSwatch({ target: document.getElementsByClassName("swatch")[0] });
 //save.js
+
 var saveButton = document.getElementById("save");
 saveButton.addEventListener("click", saveImage);
 function saveImage() {
-    var data = canvas.toDataURL()
-    window.open(data, "_image", "location=0, menubar=0");
+    var image = canvas.toDataURL();
+    window.open(image, "_image", "location=0, menubar=0");
 }
+

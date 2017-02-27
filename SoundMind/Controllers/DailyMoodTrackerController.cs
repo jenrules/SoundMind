@@ -46,7 +46,7 @@ namespace SoundMind.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Date,Mood,Notes")] DailyMoodTracker dailyMoodTracker)
+        public ActionResult Create([Bind(Include = "Id,Date,Mood,Notes, hasExercised")] DailyMoodTracker dailyMoodTracker)
         {
             if (ModelState.IsValid)
             {

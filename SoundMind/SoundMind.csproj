@@ -269,6 +269,10 @@
     <Compile Include="Migrations\201702221719017_addEmergencyTextNumberToUser.Designer.cs">
       <DependentUpon>201702221719017_addEmergencyTextNumberToUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201702260021506_boolHasExercised.cs" />
+    <Compile Include="Migrations\201702260021506_boolHasExercised.Designer.cs">
+      <DependentUpon>201702260021506_boolHasExercised.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ColoringPage.cs" />
@@ -287,14 +291,10 @@
     <Content Include="Content\bootstrapcer.css" />
     <Content Include="Content\bootstrapjournal.css" />
     <Content Include="Content\drawingCanvas.css" />
-    <Content Include="Content\FlowerMusic.jpeg" />
     <Content Include="Content\images\Photo4.jpg" />
     <Content Include="Content\images\Photo5.jpg" />
     <Content Include="Content\images\Photo6.jpg" />
-    <Content Include="Content\itunesstyle.css" />
     <Content Include="Content\lily.png" />
-    <Content Include="Content\rockPile.png" />
-    <Content Include="Content\sun.png.jpg" />
     <Content Include="EmergencyText.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -307,7 +307,6 @@
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\drawingCanvas.js" />
-    <Content Include="Scripts\itunesdata.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -429,6 +428,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201702221719017_addEmergencyTextNumberToUser.resx">
       <DependentUpon>201702221719017_addEmergencyTextNumberToUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702260021506_boolHasExercised.resx">
+      <DependentUpon>201702260021506_boolHasExercised.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
