@@ -96,9 +96,14 @@
     </div>
     <canvas id="canvas" style="display: block;"></canvas>
     <script src="drawingCanvas.js"></script>
+    <iframe src="~/content/save.php"></iframe>
+    
 </body>
 </html> 
 <p>
     @Html.ActionLink("Create New Drawing", "Create")
 </p>
 @Scripts.Render("~/Scripts/drawingCanvas.js")
+@Scripts.Render("~/content/save.php")
+@Scripts.Render("~/content/download.php")
+

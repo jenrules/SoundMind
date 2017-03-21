@@ -89,6 +89,18 @@ var saveButton = document.getElementById("save");
 saveButton.addEventListener("click", saveImage);
 function saveImage() {
     var image = canvas.toDataURL();
-    window.open(image, "_image", "location=0, menubar=0");
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function () {
+        if (request.readyState == 4 && request.status == 200) {
+            var response = request.responseText;
+            //window.open('download.php?file='+response, "_image", "location=0, menubar=0");
+            document.getElementById('downloadframe').src = 'download.php?files=' + response;
+        }        
+    }
+    request.open('POST', 'save.php', true);
+    request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    request.send('img='+data)
+    //document.getElementById('_image').src = dataURL;
+    //window.open(data, "_image", "location=0, menubar=0");
 }
 
